@@ -1,70 +1,158 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kula Koding</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://unpkg.com/lucide@latest"></script>
-</head>
-<body>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Kula Koding</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+      <script src="https://unpkg.com/lucide@latest"></script>
+   </head>
+   <body>
+      <div class="w-full px-4 py-10">
+         <div class="swiper">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide">
+                  <div
+                     class="bg-cyan-100 rounded-lg shadow p-6 text-center h-full">
+                     <i
+                        data-lucide="zap"
+                        class="w-12 h-12 text-yellow-500 mx-auto mb-4"></i>
+                     <h3 class="text-lg font-semibold mb-2 text-gray-800">
+                        Pengerjaan Cepat
+                     </h3>
+                     <p class="text-sm text-gray-700">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Donec sit amet nisl et sapien ornare fermentum.
+                     </p>
+                  </div>
+               </div>
 
-  <div class="w-full px-4 py-10">
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="bg-cyan-100 rounded-lg shadow p-6 text-center h-full">
-            <i data-lucide="zap" class="w-12 h-12 text-yellow-500 mx-auto mb-4"></i>
-            <h3 class="text-lg font-semibold mb-2 text-gray-800">Pengerjaan Cepat</h3>
-            <p class="text-sm text-gray-700">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet nisl et sapien ornare fermentum.
-            </p>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="bg-cyan-100 rounded-lg shadow p-6 text-center h-full">
-            <i data-lucide="tag" class="w-12 h-12 text-black mx-auto mb-4"></i>
-            <h3 class="text-lg font-semibold mb-2 text-gray-800">Harga Murah</h3>
-            <p class="text-sm text-gray-700">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet nisl et sapien ornare fermentum.
-            </p>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="bg-cyan-100 rounded-lg shadow p-6 text-center h-full">
-            <i data-lucide="shield-check" class="w-12 h-12 text-red-600 mx-auto mb-4"></i>
-            <h3 class="text-lg font-semibold mb-2 text-gray-800">Kualitas Terjamin</h3>
-            <p class="text-sm text-gray-700">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet nisl et sapien ornare fermentum.
-            </p>
-          </div>
-        </div>
-
+               <div class="swiper-slide">
+                  <div
+                     class="bg-cyan-100 rounded-lg shadow p-6 text-center h-full">
+                     <i
+                        data-lucide="tag"
+                        class="w-12 h-12 text-black mx-auto mb-4"></i>
+                     <h3 class="text-lg font-semibold mb-2 text-gray-800">
+                        Harga Murah
+                     </h3>
+                     <p class="text-sm text-gray-700">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Donec sit amet nisl et sapien ornare fermentum.
+                     </p>
+                  </div>
+               </div>
+               <div class="swiper-slide">
+                  <div
+                     class="bg-cyan-100 rounded-lg shadow p-6 text-center h-full">
+                     <i
+                        data-lucide="shield-check"
+                        class="w-12 h-12 text-red-600 mx-auto mb-4"></i>
+                     <h3 class="text-lg font-semibold mb-2 text-gray-800">
+                        Kualitas Terjamin
+                     </h3>
+                     <p class="text-sm text-gray-700">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Donec sit amet nisl et sapien ornare fermentum.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
-    </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <script>
-    const swiper = new Swiper(".swiper", {
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      spaceBetween: 20,
-      slidesPerView: 1,
-      breakpoints: {
-        768: {
-          slidesPerView: 3,
-        },
-      },
-    });
+      <!-- layanan -->
+      <div class="text-center">
+         <h2 class="font-medium text-lg">Layanan Kami</h2>
+      </div>
+      <!-- layanan container -->
+      <div class="max-w-[992px] p-4 mx-auto">
+         <!-- layanan-1 -->
+         <div class="md:flex gap-4">
+            <div class="md:flex-1 justify-items-center">
+               <img
+                  src="src/img/layanan_kula_digital.jpg"
+                  alt="layanan_kula_digital"
+                  class="border-2 border-orange-300 rounded-lg max-h-[392px]" />
+            </div>
+            <div class="md:flex-1">
+               <!-- layanan text -->
+               <div class="mt-2 md:mt-0">
+                  <h3 class="font-medium text-lg">
+                     Produk kula undangan digital
+                  </h3>
+                  <p class="text-justify text-sm">
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     Donec sit amet nisl et sapien ornare fermentum ac eu diam.
+                     Sed convallis faucibus nulla, vitae mollis elit lacinia id.
+                     Aenean eros nisi, ullamcorper nec lorem id, scelerisque
+                     consectetur dolor. Nulla sagittis ante sapien. Fusce varius
+                     nunc id vulputate volutpat.
+                  </p>
+               </div>
+               <!-- layanan button -->
+               <button
+                  class="bg-orange-300 rounded-lg shadow-lg font-medium underline px-10 py-1 mt-2 md:mt-10 hover:shadow-inner">
+                  Kula Digital
+               </button>
+            </div>
+         </div>
 
-    lucide.createIcons();
-  </script>
+         <!-- layanan-2 -->
+         <div class="md:flex md:flex-row-reverse gap-4 mt-4">
+            <div class="md:flex-1 justify-items-center">
+               <img
+                  src="src/img/layanan_kula_media.jpg"
+                  alt="layanan_kula_media"
+                  class="border-2 border-orange-300 rounded-lg max-h-[392px]" />
+            </div>
+            <div class="md:flex-1 md:text-right">
+               <!-- layanan text -->
+               <div class="mt-2 md:mt-0">
+                  <h3 class="font-medium text-lg">
+                     Produk kula undangan digital
+                  </h3>
+                  <p class="md:text-right text-sm">
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     Donec sit amet nisl et sapien ornare fermentum ac eu diam.
+                     Sed convallis faucibus nulla, vitae mollis elit lacinia id.
+                     Aenean eros nisi, ullamcorper nec lorem id, scelerisque
+                     consectetur dolor. Nulla sagittis ante sapien. Fusce varius
+                     nunc id vulputate volutpat.
+                  </p>
+               </div>
+               <!-- layanan button -->
+               <a href="">
+                  <button
+                     class="bg-orange-300 rounded-lg shadow-lg font-medium underline px-10 py-1 mt-2 md:mt-10 hover:shadow-inner">
+                     Kula Digital
+                  </button>
+               </a>
+            </div>
+         </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-</body>
+      <script>
+         const swiper = new Swiper(".swiper", {
+            loop: true,
+            autoplay: {
+               delay: 3000,
+               disableOnInteraction: false,
+            },
+            spaceBetween: 20,
+            slidesPerView: 1,
+            breakpoints: {
+               768: {
+                  slidesPerView: 3,
+               },
+            },
+         });
+
+         lucide.createIcons();
+      </script>
+   </body>
 </html>
