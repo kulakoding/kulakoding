@@ -11,6 +11,10 @@
         html {
             scroll-behavior: smooth;
         }
+
+        #mobile-menu {
+            transition-property: max-height, opacity, padding;
+        }
     </style>
 
 </head>
@@ -18,17 +22,17 @@
 
 <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
     <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-
-                <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2">
             <img src="https://assets.satumomen.com/images/media/373540-media-1732237229.webp" alt="Logo" class="h-8">
             <span class="font-bold text-gray-800">Kula Koding</span>
         </div>
 
-                <button id="menu-toggle" class="lg:hidden text-gray-800 focus:outline-none">
+        <button id="menu-toggle" class="lg:hidden text-gray-800 focus:outline-none">
             <i data-lucide="menu"></i>
         </button>
 
-                <nav class="hidden lg:flex gap-6 text-sm font-medium text-gray-700">
+
+        <nav class="hidden lg:flex gap-6 text-sm font-medium text-gray-700">
             <a href="#tentang" class="hover:text-orange-600">Tentang Kami</a>
             <a href="#layanan" class="hover:text-orange-600">Layanan</a>
             <a href="#produk" class="hover:text-orange-600">Produk</a>
@@ -36,15 +40,19 @@
         </nav>
     </div>
 
-        <div id="mobile-menu" class="hidden lg:hidden px-6 pt-4 pb-6 bg-white border-t border-gray-200 shadow-md">
-        <ul class="flex flex-col gap-4 text-lg font-semibold text-gray-800">
+    <div id="mobile-menu"
+         class="lg:hidden max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-6 bg-white border-t border-gray-200 shadow-md">
+        <ul class="flex flex-col gap-4 text-lg font-semibold text-gray-800 py-4">
             <li><a href="#tentang" class="block hover:text-orange-600">Tentang Kami</a></li>
             <li><a href="#layanan" class="block hover:text-orange-600">Layanan</a></li>
             <li><a href="#produk" class="block hover:text-orange-600">Produk</a></li>
             <li><a href="#portofolio" class="block hover:text-orange-600">Portofolio</a></li>
         </ul>
     </div>
+
+
 </header>
+
 
 
 
@@ -110,8 +118,6 @@
     </div>
 
     <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
-
-        <!-- Card 1 -->
         <div class="bg-white border border-orange-200 rounded-2xl shadow hover:shadow-lg transition duration-300 flex flex-col overflow-hidden">
             <img src="src/img/layanan_kula_digital.jpg" alt="Kula Digital"
                  class="w-full h-56 object-cover">
@@ -130,7 +136,7 @@
             </div>
         </div>
 
-        <!-- Card 2 -->
+
         <div class="bg-white border border-orange-200 rounded-2xl shadow hover:shadow-lg transition duration-300 flex flex-col overflow-hidden">
             <img src="src/img/layanan_kula_media.jpg" alt="Kula Media"
                  class="w-full h-56 object-cover">
@@ -162,7 +168,6 @@
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
 
-        <!-- Item 1 -->
         <div class="bg-orange-50 rounded-xl overflow-hidden shadow hover:shadow-lg transition duration-300 group">
             <div class="overflow-hidden">
                 <img src="https://kuladigital.webinvit.id/themes/lotte-gold/lotte-gold.webp" alt="Proyek 1"
@@ -174,7 +179,6 @@
             </div>
         </div>
 
-        <!-- Item 2 -->
         <div class="bg-orange-50 rounded-xl overflow-hidden shadow hover:shadow-lg transition duration-300 group">
             <div class="overflow-hidden">
                 <img src="https://kuladigital.webinvit.id/themes/art-blue-java/art-blue-java.webp" alt="Proyek 2"
@@ -189,7 +193,6 @@
         </div>
 
 
-        <!-- Item 3 -->
         <div class="bg-orange-50 rounded-xl overflow-hidden shadow hover:shadow-lg transition duration-300 group">
             <div class="overflow-hidden">
                 <img src="https://kuladigital.webinvit.id/themes/novianty/novianty.webp" alt="Proyek 3"
@@ -205,24 +208,16 @@
     </div>
 </section>
 
-
-
-
-
-
-
 <section class="py-16 px-4 bg-white" id="produk">
-    <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Produk yang Sering Dicari!</h2>
-
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Produk yang Sering Dicari!</h2>
     <div class="swiper produkSwiper max-w-7xl mx-auto">
         <div class="swiper-wrapper">
 
-            <!-- Slide Produk -->
             <div class="swiper-slide">
-                <div class="bg-orange-50 rounded-2xl shadow-md hover:shadow-lg transition duration-300 p-5 flex flex-col">
+                <div class="group bg-orange-50 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 p-5 flex flex-col">
                     <img src="https://kuladigital.webinvit.id/themes/kuda-macan/kuda-macan.webp" alt="kuda-macan"
-                         class="rounded-xl mb-4 aspect-video object-cover w-full shadow-sm">
-                    <h3 class="text-center font-semibold text-lg capitalize text-[#013735]">Kuda Macan</h3>
+                         class="rounded-xl mb-4 aspect-video object-cover w-full shadow-sm group-hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-center font-semibold text-lg capitalize text-[#013735] group-hover:text-orange-500 transition-colors">Kuda Macan</h3>
                     <div class="mt-4 flex gap-3">
                         <a href="https://kuladigital.webinvit.id/preview/kuda-macan" target="_blank"
                            class="flex-1 border border-[#013735] text-[#013735] text-sm py-2 rounded-lg text-center font-medium hover:bg-[#013735] hover:text-white transition">
@@ -235,12 +230,11 @@
                 </div>
             </div>
 
-            <!-- Slide 2 -->
             <div class="swiper-slide">
-                <div class="bg-orange-50 rounded-2xl shadow-md hover:shadow-lg transition duration-300 p-5 flex flex-col">
+                <div class="group bg-orange-50 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 p-5 flex flex-col">
                     <img src="https://kuladigital.webinvit.id/themes/novianty/novianty.webp" alt="novianty"
-                         class="rounded-xl mb-4 aspect-video object-cover w-full shadow-sm">
-                    <h3 class="text-center font-semibold text-lg capitalize text-[#013735]">Novianty</h3>
+                         class="rounded-xl mb-4 aspect-video object-cover w-full shadow-sm group-hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-center font-semibold text-lg capitalize text-[#013735] group-hover:text-orange-500 transition-colors">Novianty</h3>
                     <div class="mt-4 flex gap-3">
                         <a href="https://kuladigital.webinvit.id/preview/novianty" target="_blank"
                            class="flex-1 border border-[#013735] text-[#013735] text-sm py-2 rounded-lg text-center font-medium hover:bg-[#013735] hover:text-white transition">
@@ -253,12 +247,11 @@
                 </div>
             </div>
 
-            <!-- Slide 3 -->
             <div class="swiper-slide">
-                <div class="bg-orange-50 rounded-2xl shadow-md hover:shadow-lg transition duration-300 p-5 flex flex-col">
+                <div class="group bg-orange-50 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 p-5 flex flex-col">
                     <img src="https://kuladigital.webinvit.id/themes/lotte-gold/lotte-gold.webp" alt="lotte-gold"
-                         class="rounded-xl mb-4 aspect-video object-cover w-full shadow-sm">
-                    <h3 class="text-center font-semibold text-lg capitalize text-[#013735]">Lotte Gold</h3>
+                         class="rounded-xl mb-4 aspect-video object-cover w-full shadow-sm group-hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-center font-semibold text-lg capitalize text-[#013735] group-hover:text-orange-500 transition-colors">Lotte Gold</h3>
                     <div class="mt-4 flex gap-3">
                         <a href="https://kuladigital.webinvit.id/preview/lotte-gold" target="_blank"
                            class="flex-1 border border-[#013735] text-[#013735] text-sm py-2 rounded-lg text-center font-medium hover:bg-[#013735] hover:text-white transition">
@@ -271,12 +264,11 @@
                 </div>
             </div>
 
-            <!-- Slide 4 -->
             <div class="swiper-slide">
-                <div class="bg-orange-50 rounded-2xl shadow-md hover:shadow-lg transition duration-300 p-5 flex flex-col">
+                <div class="group bg-orange-50 rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 p-5 flex flex-col">
                     <img src="https://kuladigital.webinvit.id/themes/art-blue-java/art-blue-java.webp" alt="art-blue-java"
-                         class="rounded-xl mb-4 aspect-video object-cover w-full shadow-sm">
-                    <h3 class="text-center font-semibold text-lg capitalize text-[#013735]">Art Blue Java</h3>
+                         class="rounded-xl mb-4 aspect-video object-cover w-full shadow-sm group-hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-center font-semibold text-lg capitalize text-[#013735] group-hover:text-orange-500 transition-colors">Art Blue Java</h3>
                     <div class="mt-4 flex gap-3">
                         <a href="https://kuladigital.webinvit.id/preview/art-blue-java" target="_blank"
                            class="flex-1 border border-[#013735] text-[#013735] text-sm py-2 rounded-lg text-center font-medium hover:bg-[#013735] hover:text-white transition">
@@ -294,6 +286,7 @@
         <div class="swiper-pagination mt-10 mb-4 !relative !z-10"></div>
     </div>
 </section>
+
 
 
 
@@ -428,7 +421,7 @@
         <div>
             <h4 class="font-bold text-2xl mb-3 text-orange-400">Kula Koding</h4>
             <p class="text-sm leading-relaxed text-slate-200">
-                Kula Koding adalah kumpulan layanan digital kreatif. mulai dari undangan, media pembelajaran, hingga desain interaktif yang mendukung pertumbuhan bisnismu.
+                Kula Koding adalah kumpulan layanan digital kreatif. mulai dari undangan dan media pembelajaran.
             </p>
         </div>
 
@@ -496,6 +489,7 @@
             768: { slidesPerView: 3 },
         },
     });
+
     const swiperProduk = new Swiper(".produkSwiper", {
         loop: true,
         autoplay: {
@@ -509,34 +503,32 @@
             clickable: true,
         },
         breakpoints: {
-            640: {
-                slidesPerView: 1.2,
-            },
-            768: {
-                slidesPerView: 2,
-            },
-            1024: {
-                slidesPerView: 3,
-            },
-            1280: {
-                slidesPerView: 4,
-            }
-        }
+            640: { slidesPerView: 1.2 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
+        },
     });
-
-
 
     const toggle = document.getElementById('menu-toggle');
-        const menu = document.getElementById('mobile-menu');
+    const menu = document.getElementById('mobile-menu');
+    let isOpen = false;
 
-        toggle.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-    });
+    toggle.addEventListener('click', () => {
+        isOpen = !isOpen;
 
-
+        if (isOpen) {
+            menu.classList.remove("max-h-0", "opacity-0", "pb-0", "pt-0");
+            menu.classList.add("max-h-screen", "opacity-100", "pb-6", "pt-4");
+        } else {
+            menu.classList.add("max-h-0", "opacity-0", "pb-0", "pt-0");
+            menu.classList.remove("max-h-screen", "opacity-100", "pb-6", "pt-4");
+        }
+    })
 
     lucide.createIcons();
 </script>
+
 
 </body>
 </html>
