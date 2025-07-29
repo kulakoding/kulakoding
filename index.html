@@ -6,6 +6,7 @@
     <title>Kula Koding</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         html {
@@ -20,18 +21,15 @@
 </head>
 <body class="text-gray-800 bg-white">
 
-<header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+<header class="bg-white shadow-md fixed top-0 left-0 w-full z-50" data-aos="fade-down" data-aos-duration="800">
     <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
         <div class="flex items-center gap-2">
-            <img src="https://assets.satumomen.com/images/media/373540-media-1732237229.webp" alt="Logo" class="h-8">
+            <img src="https://assets.satumomen.com/images/media/373540-media-1732237229.webp" alt="Logo" class="h-8" />
             <span class="font-bold text-gray-800">Kula Koding</span>
         </div>
-
         <button id="menu-toggle" class="lg:hidden text-gray-800 focus:outline-none">
             <i data-lucide="menu"></i>
         </button>
-
-
         <nav class="hidden lg:flex gap-6 text-sm font-medium text-gray-700">
             <a href="#tentang" class="hover:text-orange-600">Tentang Kami</a>
             <a href="#layanan" class="hover:text-orange-600">Layanan</a>
@@ -39,9 +37,7 @@
             <a href="#portofolio" class="hover:text-orange-600">Portofolio</a>
         </nav>
     </div>
-
-    <div id="mobile-menu"
-         class="lg:hidden max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-6 bg-white border-t border-gray-200 shadow-md">
+    <div id="mobile-menu" class="lg:hidden max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-6 bg-white border-t border-gray-200 shadow-md">
         <ul class="flex flex-col gap-4 text-lg font-semibold text-gray-800 py-4">
             <li><a href="#tentang" class="block hover:text-orange-600">Tentang Kami</a></li>
             <li><a href="#layanan" class="block hover:text-orange-600">Layanan</a></li>
@@ -49,78 +45,99 @@
             <li><a href="#portofolio" class="block hover:text-orange-600">Portofolio</a></li>
         </ul>
     </div>
-
-
 </header>
 
 
-
-
-
-
-<section id="tentang" class="pt-28 pb-20 px-4 bg-orange-300 text-center relative overflow-hidden">
-    <div class="max-w-3xl mx-auto">
-        <h1 class="text-4xl font-extrabold text-gray-900 mb-4">Selamat Datang di <span class="text-[#013735]">Kula Koding</span></h1>
-        <p class="text-lg text-gray-800 mb-6 leading-relaxed">
-            Selesaikan masalah digitalmu dengan langkah mudah dan praktis bersama kami.
-        </p>
-        <a href="https://api.whatsapp.com/send/?phone=628115006164&text=Halo+kak+saya+ingin+bertanya%2C+terkait+undangan+digital+Kula+Digital&type=phone_number&app_absent=0"
-           class="inline-block bg-[#013735] text-white font-semibold px-8 py-3 rounded-full shadow hover:bg-[#02554e] transition duration-300">
-            Hubungi Kami
-        </a>
-    </div>
-</section>
-
-<section class="py-16 px-4 bg-white">
-    <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-bold text-gray-900 mb-6">Tentang Kula Koding</h2>
-        <p class="text-gray-700 text-base leading-relaxed">
-            Kami adalah tim kreatif digital yang berdedikasi memberikan solusi teknologi secara sederhana, cepat, dan efektif untuk bisnis maupun individu. Dengan semangat lokal dan sentuhan profesional, kami berkomitmen mendukung pertumbuhan digital Anda mulai dari undangan interaktif, media pembelajaran, hingga desain personalisasi.
-        </p>
-    </div>
+<section id="tentang" class="pt-32 pb-28 px-6 bg-orange-300 text-center relative overflow-hidden">
+<div class="max-w-4xl mx-auto relative z-10">
+    <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6" data-aos="fade-up">
+        Solusi <span class="text-[#013735]">Undangan Digital</span> & <br class="hidden md:block" />
+        <span class="text-[#013735]">Media pembelajaran</span> yang Praktis & Profesional
+    </h1>
+    <p class="text-lg md:text-xl text-gray-800 leading-relaxed mb-8" data-aos="fade-up" data-aos-delay="150">
+        Bikin undangan web elegan dan platform belajar online tanpa ribet. Kula Koding bantu wujudkan semuanya secara cepat dan mudah.
+    </p>
+    <a href="https://api.whatsapp.com/send/?phone=628115006164&text=Halo+kak+saya+ingin+bertanya%2C+terkait+undangan+digital+Kula+Digital&type=phone_number&app_absent=0"
+       class="inline-block bg-[#013735] text-white font-semibold px-10 py-4 rounded-full shadow-md hover:bg-[#02554e] transition duration-300"
+       data-aos="zoom-in" data-aos-delay="300">
+        Konsultasi Gratis via WhatsApp
+    </a>
+</div>
 </section>
 
 
+<section class="py-20 px-6 bg-white">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-12">
+        <div class="relative" data-aos="fade-right">
+            <img src="/public/ilus.svg" alt="Tentang Kula Koding" class="w-full max-w-md mx-auto drop-shadow-md" />
+            <div class="absolute -top-4 -left-4 w-20 h-20 bg-orange-200 rounded-full blur-2xl opacity-50"></div>
+        </div>
+        <div data-aos="fade-left" data-aos-delay="100">
+            <h2 class="text-4xl font-extrabold text-[#013735] mb-6 leading-tight">Tentang Kula Koding</h2>
+            <p class="text-gray-700 text-lg leading-relaxed">
+                <span class="font-semibold text-[#02554e]">Kula Koding</span> adalah penyedia jasa digital kreatif yang fokus pada pembuatan <span class="font-semibold">undangan digital</span> dan <span class="font-semibold">media pembelajaran online</span> yang modern, interaktif, dan mudah diakses.
+                <br class="hidden md:block" /><br />
+                Kami hadir untuk membantu individu, UMKM, hingga institusi pendidikan menghadirkan pengalaman digital yang elegan dan fungsional tanpa ribet.
+            </p>
+            <ul class="list-disc list-inside mt-6 text-left text-gray-700">
+                <li>Undangan digital (pernikahan, ulang tahun, wisuda, dll)</li>
+                <li>Media pembelajaran</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
-<section class="py-10 px-4">
-    <h2 class="text-xl font-bold text-center mb-6">Kenapa memilih kami?</h2>
-    <div class="swiper kenapaSwiper">
-        <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                <div class="bg-cyan-100 p-6 rounded-lg shadow text-center">
-                    <i data-lucide="zap" class="w-10 h-10 text-yellow-500 mx-auto mb-4"></i>
-                    <h3 class="font-semibold mb-2">Pengerjaan Cepat</h3>
-                    <p class="text-sm">Proses cepat dan efisien sesuai kebutuhan digital Anda.</p>
+<section class="py-20 px-4 bg-orange-100">
+    <div class="max-w-5xl mx-auto" data-aos="fade-up">
+        <h2 class="text-3xl font-extrabold text-center text-[#013735] mb-12">Kenapa Memilih Kami?</h2>
+        <div class="swiper kenapaSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide px-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                        <div class="flex items-center justify-center w-16 h-16 mx-auto mb-5 rounded-full bg-yellow-100">
+                            <i data-lucide="zap" class="w-8 h-8 text-yellow-500"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-[#013735] mb-2">Pengerjaan Cepat</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed">Proses cepat dan efisien sesuai kebutuhan digital Anda.</p>
+                    </div>
                 </div>
-            </div>
-                        <div class="swiper-slide">
-                <div class="bg-cyan-100 p-6 rounded-lg shadow text-center">
-                    <i data-lucide="tag" class="w-10 h-10 text-black mx-auto mb-4"></i>
-                    <h3 class="font-semibold mb-2">Harga Murah</h3>
-                    <p class="text-sm">Layanan berkualitas dengan harga yang sangat bersaing.</p>
+                <div class="swiper-slide px-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                        <div class="flex items-center justify-center w-16 h-16 mx-auto mb-5 rounded-full bg-orange-200">
+                            <i data-lucide="tag" class="w-8 h-8 text-orange-500"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-[#013735] mb-2">Harga Terjangkau</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed">Layanan berkualitas dengan harga yang bersaing.</p>
+                    </div>
                 </div>
-            </div>
-                        <div class="swiper-slide">
-                <div class="bg-cyan-100 p-6 rounded-lg shadow text-center">
-                    <i data-lucide="shield-check" class="w-10 h-10 text-red-500 mx-auto mb-4"></i>
-                    <h3 class="font-semibold mb-2">Kualitas Terjamin</h3>
-                    <p class="text-sm">Dibuat oleh tim profesional dengan standar tinggi.</p>
+                <div class="swiper-slide px-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="bg-white p-8 rounded-xl shadow-md text-center">
+                        <div class="flex items-center justify-center w-16 h-16 mx-auto mb-5 rounded-full bg-cyan-100">
+                            <i data-lucide="shield-check" class="w-8 h-8 text-teal-600"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-[#013735] mb-2">Kualitas Terjamin</h3>
+                        <p class="text-gray-700 text-sm leading-relaxed">Dibuat oleh tim profesional dengan standar tinggi.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+
 <section class="bg-white py-20 px-6" id="layanan">
-    <div class="text-center mb-16">
+    <div class="text-center mb-16" data-aos="fade-up">
         <h2 class="text-4xl font-bold text-gray-800">Layanan Kami</h2>
         <p class="text-gray-600 text-base mt-2">Berbagai layanan digital untuk membantumu berkembang</p>
     </div>
 
     <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
-        <div class="bg-white border border-orange-200 rounded-2xl shadow hover:shadow-lg transition duration-300 flex flex-col overflow-hidden">
-            <img src="src/img/layanan_kula_digital.jpg" alt="Kula Digital"
-                 class="w-full h-56 object-cover">
+        <!-- Layanan 1 -->
+        <div class="bg-white border border-orange-100 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 flex flex-col overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative group">
+                <img src="src/img/layanan_kula_digital.jpg" alt="Kula Digital" class="w-full h-56 object-cover transition duration-300 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-0 transition duration-300"></div>
+            </div>
             <div class="p-6 flex flex-col flex-1">
                 <h3 class="text-2xl font-semibold text-gray-800 mb-3">Undangan Digital - Kula Digital</h3>
                 <p class="text-gray-700 text-sm leading-relaxed mb-5 text-justify">
@@ -128,7 +145,7 @@
                 </p>
                 <div class="mt-auto">
                     <a href="https://kuladigital.webinvit.id/" target="_blank" rel="noopener">
-                        <button class="bg-orange-400 hover:bg-orange-500 text-white font-semibold px-6 py-2 rounded-lg shadow-md transition duration-300">
+                        <button class="bg-[#013735] hover:bg-[#025b60] text-white font-semibold px-6 py-2 rounded-lg shadow-md transition duration-300">
                             Lihat Kula Digital
                         </button>
                     </a>
@@ -136,10 +153,12 @@
             </div>
         </div>
 
-
-        <div class="bg-white border border-orange-200 rounded-2xl shadow hover:shadow-lg transition duration-300 flex flex-col overflow-hidden">
-            <img src="src/img/layanan_kula_media.jpg" alt="Kula Media"
-                 class="w-full h-56 object-cover">
+        <!-- Layanan 2 -->
+        <div class="bg-white border border-orange-100 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 flex flex-col overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative group">
+                <img src="src/img/layanan_kula_media.jpg" alt="Kula Media" class="w-full h-56 object-cover transition duration-300 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-0 transition duration-300"></div>
+            </div>
             <div class="p-6 flex flex-col flex-1">
                 <h3 class="text-2xl font-semibold text-gray-800 mb-3">Media Pembelajaran - Kula Media</h3>
                 <p class="text-gray-700 text-sm leading-relaxed mb-5 text-justify">
@@ -147,16 +166,16 @@
                 </p>
                 <div class="mt-auto">
                     <a href="https://kuladigital.webinvit.id/" target="_blank" rel="noopener">
-                        <button class="bg-orange-400 hover:bg-orange-500 text-white font-semibold px-6 py-2 rounded-lg shadow-md transition duration-300">
+                        <button class="bg-[#013735] hover:bg-[#025b60] text-white font-semibold px-6 py-2 rounded-lg shadow-md transition duration-300">
                             Lihat Kula Media
                         </button>
                     </a>
                 </div>
             </div>
         </div>
-
     </div>
 </section>
+
 
 
 
@@ -463,7 +482,12 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
+    AOS.init({
+        duration: 800,
+        once: true,
+    });
     const swiperKenapa = new Swiper(".kenapaSwiper", {
         loop: true,
         autoplay: {
